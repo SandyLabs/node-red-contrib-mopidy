@@ -1,0 +1,14 @@
+{
+    "name"         : "node-red-mopidy",
+    "version"      : "0.0.1",
+    "description"  : "A mopidy client node for interacting with music playback.",
+    "dependencies": {
+	"mopidy": "latest"
+    },
+    "keywords": [ "node-red", "music", "mopidy" ],
+    "node-red"     : {
+        "nodes": {
+            "mopidy": "mopidy/mopidy.js"
+        }
+    }
+}
