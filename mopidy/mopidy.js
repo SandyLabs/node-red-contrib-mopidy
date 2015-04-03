@@ -6,6 +6,10 @@ module.exports = function(RED) {
 	this.mopidy = new Mopidy({
 	    webSocketUrl: "ws://localhost:6680/mopidy/ws/"
 	});
+	this.on('close', function() {
+            this.mopidy.close();
+	    this.mopidy.off();
+        });
 	this.nowPlaying = function(track) {
 	    var msg = {};
 	    if (track) {
@@ -29,6 +33,10 @@ module.exports = function(RED) {
 	this.mopidy = new Mopidy({
 	    webSocketUrl: "ws://localhost:6680/mopidy/ws/"
 	});
+	this.on('close', function() {
+            this.mopidy.close();
+	    this.mopidy.off();
+        });
 	this.mopidy.on("state:online", function () {
 	    node.on('input', function(msg) {
 		if (msg.payload == "next") {
