@@ -1,5 +1,5 @@
 {
-    "name"         : "node-red-mopidy",
+    "name"         : "node-red-contrib-mopidy",
     "version"      : "0.9.0",
     "description"  : "A mopidy client node for interacting with music playback.",
     "dependencies": {
